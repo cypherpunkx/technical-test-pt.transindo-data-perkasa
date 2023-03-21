@@ -41,16 +41,18 @@ function Card({
     >
       <div className="relative shadow-lg p-6 pt-16 sm:p-6 border-l-4 border-l-desaturated-dark-cyan bg-white rounded">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="absolute -top-5 left-5 sm:relative sm:inset-0 ">
+          <div className="absolute -top-5 left-5 sm:relative sm:inset-0 flex-0 md:w-40">
             <img
               src={logo}
               alt={company}
-              className="w-16 h-16 sm:w-full sm:h-full aspect-auto"
+              className="w-16 h-16 md:w-full md:h-full aspect-auto"
             />
           </div>
-          <div className="w-full mr-auto space-y-2">
+          <div className="w-full mr-auto space-y-2 sm:text-center md:text-left">
             <div className="space-x-4 text-white font-semibold">
-              <span className="text-desaturated-dark-cyan ">{company}</span>
+              <span className="text-desaturated-dark-cyan text-xl md:text-2xl">
+                {company}
+              </span>
               <span className="rounded-full bg-desaturated-dark-cyan py-1 px-2">
                 New!
               </span>
