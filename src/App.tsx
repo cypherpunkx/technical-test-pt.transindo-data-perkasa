@@ -40,10 +40,10 @@ function App() {
       <header>
         <Header />
       </header>
-      <article className="container mx-auto my-8 font-sans space-y-8 px-6 sm:px-0">
-        {value ? <Filter value={value} setValue={setValue} /> : null}
-        <m.div layout>
-          <AnimatePresence>
+      <m.div layout>
+        <AnimatePresence>
+          <article className="container mx-auto my-8 font-sans space-y-8 px-6 sm:px-0">
+            {value ? <Filter value={value} setValue={setValue} /> : null}
             {filter.length > 0 ? (
               filter.map((emp) => (
                 <div key={emp.id}>
@@ -55,9 +55,9 @@ function App() {
                 <h1 className="text-4xl">No Result...</h1>
               </div>
             )}
-          </AnimatePresence>
-        </m.div>
-      </article>
+          </article>
+        </AnimatePresence>
+      </m.div>
     </main>
   );
 }
